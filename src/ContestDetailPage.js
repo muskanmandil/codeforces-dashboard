@@ -50,9 +50,9 @@ const ContestDetailPage = ({ contests }) => {
 
     // Helper function to format details consistently
     const formatContestDetail = (label, value, icon) => (
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 mb-4">
             <Icon source={icon} tone="magic" />
-            <div>
+            <div className='flex-1'>
                 <Text variant="bodyMd" fontWeight="bold">{label}</Text>
                 <Text variant="bodyMd">{value}</Text>
             </div>
@@ -97,7 +97,7 @@ const ContestDetailPage = ({ contests }) => {
             }}>
                 <div className="space-y-4">
                     <Card>
-                        <div className="flex justify-between items-center">
+                        <div className="flex justify-between items-center mb-6">
                             <Text variant="headingMd" as="h2">
                                 Contest Details
                             </Text>
@@ -108,9 +108,9 @@ const ContestDetailPage = ({ contests }) => {
                         {formatContestDetail('Contest Type', contest.type, ClockIcon)}
                         {formatContestDetail('Start Time', formatDate(contest.startTimeSeconds), CalendarIcon)}
 
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 mb-4">
                             <Icon source={ClockIcon} tone="magic" />
-                            <div>
+                            <div className='flex-1'>
                                 <Text variant="bodyMd" fontWeight="bold">Duration</Text>
                                 <Text variant="bodyMd">{formatDuration(contest.durationSeconds)}</Text>
                             </div>
